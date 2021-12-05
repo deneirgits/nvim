@@ -19,7 +19,7 @@ M.options = {
 }
 
 M.ui = {
-  theme = "javacafe"
+   theme = "javacafe",
 }
 
 -- NvChad included plugin options & overrides
@@ -40,27 +40,27 @@ M.plugins = {
       autopairs = true,
    },
    options = {
-        lspconfig = {
-          setup_lspconf = "custom.plugins.lspconfig",
-        },
-        nvimtree = {
-           enable_git = 1,
-        },
-        statusline = { -- statusline related options
-           -- these are filetypes, not pattern matched
-           -- shown filetypes will overrule hidden filetypes
-           hidden = {
-              "help",
-              "dashboard",
-              "NvimTree",
-              "terminal",
-           },
-           -- show short statusline on small screens
-           shortline = false,
-           shown = {},
-           -- default, round , slant , block , arrow
-           style = "block",
-        },
+      lspconfig = {
+         setup_lspconf = "custom.plugins.lspconfig",
+      },
+      nvimtree = {
+         enable_git = 1,
+      },
+      statusline = { -- statusline related options
+         -- these are filetypes, not pattern matched
+         -- shown filetypes will overrule hidden filetypes
+         hidden = {
+            "help",
+            "dashboard",
+            "NvimTree",
+            "terminal",
+         },
+         -- show short statusline on small screens
+         shortline = false,
+         shown = {},
+         -- default, round , slant , block , arrow
+         style = "block",
+      },
    },
    -- To change the Packer `config` of a plugin that comes with NvChad,
    -- add a table entry below matching the plugin github name
