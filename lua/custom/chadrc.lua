@@ -29,6 +29,7 @@ M.plugins = {
       bufferline = true, -- list open buffers up the top, easy switching too
       colorizer = true, -- color RGB, HEX, CSS, NAME color codes
       comment = true, -- easily (un)comment code, language aware
+      dashboard = true, -- NeoVim 'home screen' on open
       esc_insertmode = true, -- map to <ESC> with no lag
       feline = true, -- statusline
       gitsigns = true, -- gitsigns in statusline
@@ -70,6 +71,7 @@ M.plugins = {
    --              use "custom.blankline" to call a file
    default_plugin_config_replace = {
       feline = "custom.plugins.statusline",
+      dashboard = "custom.plugins.dashboard",
    },
 }
 
