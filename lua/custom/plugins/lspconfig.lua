@@ -31,17 +31,25 @@ M.setup_lsp = function(attach, capabilities)
 
    -- lua
    -- set the path to the sumneko installation; if you previously installed via the now deprecated :LspInstall, use
-   local sumneko_root_path = "/usr/lib/lua-language-server"
+   local sumneko_bin_path = "/usr/bin"
+   local sumneko_main_path = "/usr/lib/lua-language-server"
+
+   if vim.fn.has("mac") == 1 then  -- work computer
+    sumneko_bin_path = "/Users/duy/tools/lua-language-server/bin/macOS"
+    sumneko_main_path = "/Users/duy/tools/lua-language-server/bin/macOS"
+   end
+
    local runtime_path = vim.split(package.path, ";")
    table.insert(runtime_path, "lua/?.lua")
    table.insert(runtime_path, "lua/?/init.lua")
+
    lspconfig.sumneko_lua.setup {
       on_attach = attach,
       capabilities = capabilities,
       flags = {
          debounce_text_changes = 150,
       },
-      cmd = { "/usr/bin/lua-language-server", "-E", sumneko_root_path .. "/main.lua" },
+      cmd = { sumneko_bin_path .. "/lua-language-server", "-E", sumneko_main_path .. "/main.lua" },
       settings = {
          Lua = {
             runtime = {
