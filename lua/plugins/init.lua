@@ -65,7 +65,7 @@ return packer.startup(function()
    use {
       "famiu/feline.nvim",
       disable = not plugin_settings.status.feline,
-      after = "nvim-web-devicons",
+      after = { "nvim-web-devicons", "nvim-gps" },
       config = override_req("feline", "plugins.configs.statusline"),
    }
 
@@ -95,7 +95,7 @@ return packer.startup(function()
 
    use {
       "nvim-treesitter/nvim-treesitter",
-      branch = "0.5-compat",
+      branch = "master",
       event = "BufRead",
       config = override_req("nvim_treesitter", "plugins.configs.treesitter"),
    }

@@ -48,6 +48,7 @@ local user_statusline_style = config.style
 local statusline_style = icon_styles[user_statusline_style]
 -- if show short statusline on small screens
 local shortline = config.shortline == false and true
+local gps = require "nvim-gps"
 
 -- Initialize the components table
 local components = {
@@ -181,6 +182,18 @@ components.active[1][10] = {
    end,
    hl = { fg = colors.green },
    icon = "  ",
+}
+
+components.active[1][11] = {
+   provider = function()
+      return " " .. gps.get_location()
+   end,
+   enabled = function()
+      return gps.is_available()
+   end,
+   hl = {
+      fg = colors.grey_fg2,
+   },
 }
 
 components.active[2][1] = {
