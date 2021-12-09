@@ -106,8 +106,8 @@ M.misc = function()
       cmd "silent! command PackerUpdate lua require 'plugins' require('packer').update()"
 
       -- add NvChadUpdate command and mapping
-      cmd "silent! command! NvChadUpdate lua require('nvchad').update_nvchad()"
-      map("n", maps.update_nvchad, ":NvChadUpdate <CR>")
+      -- cmd "silent! command! NvChadUpdate lua require('nvchad').update_nvchad()"
+      -- map("n", maps.update_nvchad, ":NvChadUpdate <CR>")
 
       -- add ChadReload command and maping
       -- cmd "silent! command! NvChadReload lua require('nvchad').reload_config()"

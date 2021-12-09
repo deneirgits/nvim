@@ -1,4 +1,4 @@
 # nvim
 Neovim configuration
 
-Base config: [Neovim](https://github.com/NvChad/NvChad/)
+Base config: [NvChad](https://github.com/NvChad/NvChad/)

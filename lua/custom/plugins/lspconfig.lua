@@ -4,6 +4,16 @@ local M = {}
 M.setup_lsp = function(attach, capabilities)
    local lspconfig = require "lspconfig"
 
+   -- replace the default lsp diagnostic symbols
+   --    local function lspSymbol(name, icon)
+   --       vim.fn.sign_define("DiagnosticSign" .. name, { text = icon, numhl = "DiagnosticDefault" .. name })
+   --    end
+   --
+   --    lspSymbol("Error", "")
+   --    lspSymbol("Information", "")
+   --    lspSymbol("Hint", "")
+   --    lspSymbol("Warning", "")
+
    -- lspservers with default config
 
    local servers = { "cssls", "pyright" }
@@ -34,9 +44,9 @@ M.setup_lsp = function(attach, capabilities)
    local sumneko_bin_path = "/usr/bin"
    local sumneko_main_path = "/usr/lib/lua-language-server"
 
-   if vim.fn.has("mac") == 1 then  -- work computer
-    sumneko_bin_path = "/Users/duy/tools/lua-language-server/bin/macOS"
-    sumneko_main_path = "/Users/duy/tools/lua-language-server/bin/macOS"
+   if vim.fn.has "mac" == 1 then -- work computer
+      sumneko_bin_path = "/Users/duy/tools/lua-language-server/bin/macOS"
+      sumneko_main_path = "/Users/duy/tools/lua-language-server/bin/macOS"
    end
 
    local runtime_path = vim.split(package.path, ";")

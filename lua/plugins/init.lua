@@ -66,7 +66,7 @@ return packer.startup(function()
       "famiu/feline.nvim",
       disable = not plugin_settings.status.feline,
       after = { "nvim-web-devicons", "nvim-gps" },
-      config = override_req("feline", "plugins.configs.statusline"),
+      config = override_req("feline", "plugins.config.statusline"),
    }
 
    use {

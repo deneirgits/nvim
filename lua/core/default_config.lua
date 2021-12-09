@@ -35,8 +35,8 @@ M.options = {
       window_nav = true,
       theme_toggler = false,
       -- used for updater
-      update_url = "https://github.com/NvChad/NvChad",
-      update_branch = "main",
+      -- update_url = "https://github.com/NvChad/NvChad",
+      -- update_branch = "main",
    },
 }
 
@@ -149,7 +149,7 @@ M.mappings = {
       new_window = "<leader>w",
    },
    -- update nvchad from nvchad, chadness 101
-   update_nvchad = "<leader>uu",
+   -- update_nvchad = "<leader>uu",
 }
 
 -- all plugins related mappings

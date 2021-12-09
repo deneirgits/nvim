@@ -54,13 +54,14 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
 
 -- replace the default lsp diagnostic symbols
 local function lspSymbol(name, icon)
-   vim.fn.sign_define("LspDiagnosticsSign" .. name, { text = icon, numhl = "LspDiagnosticsDefault" .. name })
+   local hl = "DiagnosticSign" .. name
+   vim.fn.sign_define(hl, { text = icon, numhl = hl, texthl = hl })
 end
 
 lspSymbol("Error", "")
-lspSymbol("Information", "")
+lspSymbol("Info", "")
 lspSymbol("Hint", "")
-lspSymbol("Warning", "")
+lspSymbol("Warn", "")
 
 local lsp_publish_diagnostics_options = overrides.get("publish_diagnostics", {
    virtual_text = {

@@ -136,6 +136,15 @@ hooks.add("install_plugins", function(use)
          require("nvim-gps").setup()
       end,
    }
+
+   -- highlight todo
+   use {
+      "folke/todo-comments.nvim",
+      requires = "nvim-lua/plenary.nvim",
+      config = function()
+         require("todo-comments").setup {}
+      end,
+   }
 end)
 
 -- alternatively, put this in a sub-folder like "lua/custom/plugins/mkdir"
@@ -146,7 +155,7 @@ end)
 vim.o.colorcolumn = "99"
 vim.o.scrolloff = 999
 
--- hop keybinding
+-- hop keymapping
 vim.api.nvim_set_keymap("", "f", "<cmd>lua require'hop'.hint_char1({})<cr>", {})
 
 -- formatters
@@ -165,3 +174,7 @@ augroup END
 ]],
    true
 )
+
+-- split keymapping
+vim.api.nvim_set_keymap("n", "<space>\\", "<cmd>vsplit<CR>", {})
+vim.api.nvim_set_keymap("n", "<space>|", "<cmd>split<CR>", {})
