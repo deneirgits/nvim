@@ -4,16 +4,6 @@ local M = {}
 M.setup_lsp = function(attach, capabilities)
    local lspconfig = require "lspconfig"
 
-   -- replace the default lsp diagnostic symbols
-   --    local function lspSymbol(name, icon)
-   --       vim.fn.sign_define("DiagnosticSign" .. name, { text = icon, numhl = "DiagnosticDefault" .. name })
-   --    end
-   --
-   --    lspSymbol("Error", "")
-   --    lspSymbol("Information", "")
-   --    lspSymbol("Hint", "")
-   --    lspSymbol("Warning", "")
-
    -- lspservers with default config
 
    local servers = { "cssls", "pyright" }
