@@ -33,7 +33,7 @@ opt.ruler = options.ruler
 -- disable nvim intro
 opt.shortmess:append "sI"
 
-opt.signcolumn = "yes"
+opt.signcolumn = "auto:2-6"
 opt.splitbelow = true
 opt.splitright = true
 opt.tabstop = options.tabstop
