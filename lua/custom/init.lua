@@ -145,6 +145,14 @@ hooks.add("install_plugins", function(use)
          require("todo-comments").setup {}
       end,
    }
+
+   use {
+      "TimUntersberger/neogit",
+      requires = "nvim-lua/plenary.nvim",
+      config = function()
+         require("neogit").setup {}
+      end,
+   }
 end)
 
 -- alternatively, put this in a sub-folder like "lua/custom/plugins/mkdir"
@@ -178,3 +186,6 @@ augroup END
 -- split keymapping
 vim.api.nvim_set_keymap("n", "<space>\\", "<cmd>vsplit<CR>", {})
 vim.api.nvim_set_keymap("n", "<space>|", "<cmd>split<CR>", {})
+
+-- open neogit
+vim.api.nvim_set_keymap("n", "<space>git", "<cmd>Neogit<CR>", {})
