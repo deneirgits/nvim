@@ -79,7 +79,7 @@ M.misc = function()
       map("n", maps.copy_whole_file, ":%y+ <CR>") -- copy whole file content
       map("n", maps.new_buffer, ":enew <CR>") -- new buffer
       map("n", maps.new_tab, ":tabnew <CR>") -- new tabs
-      map("n", maps.line_number_toggle, ":set nu! <CR>") -- toggle numbers
+      -- map("n", maps.line_number_toggle, ":set nu! <CR>") -- toggle numbers
       map("n", maps.save_file, ":w <CR>") -- ctrl + s to save file
 
       -- terminal mappings --

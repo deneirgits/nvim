@@ -153,6 +153,7 @@ hooks.add("install_plugins", function(use)
          require("neogit").setup {}
       end,
    }
+   use "simrat39/symbols-outline.nvim"
 end)
 
 -- alternatively, put this in a sub-folder like "lua/custom/plugins/mkdir"
@@ -189,3 +190,10 @@ vim.api.nvim_set_keymap("n", "<space>|", "<cmd>split<CR>", {})
 
 -- open neogit
 vim.api.nvim_set_keymap("n", "<space>git", "<cmd>Neogit<CR>", {})
+
+-- outline settings
+vim.g.symbols_outline = {
+   relative_width = false,
+   width = 40,
+}
+vim.api.nvim_set_keymap("n", "<space>n", "<cmd>SymbolsOutline<CR>", {})
