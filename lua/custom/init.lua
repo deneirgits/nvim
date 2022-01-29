@@ -62,20 +62,20 @@ hooks.add("install_plugins", function(use)
             on_paste = {
                set_reg = true,
             },
-            keys = {
-               i = {
-                  select = "<cr>",
-                  paste = "<c-p>",
-                  paste_behind = "<c-k>",
-                  custom = {},
-               },
-               n = {
-                  select = "<cr>",
-                  paste = "p",
-                  paste_behind = "P",
-                  custom = {},
-               },
-            },
+            -- keys = {
+            --    i = {
+            --       select = "<cr>",
+            --       paste = "<c-p>",
+            --       paste_behind = "<c-k>",
+            --       custom = {},
+            --    },
+            --    n = {
+            --       select = "<cr>",
+            --       paste = "p",
+            --       paste_behind = "P",
+            --       custom = {},
+            --    },
+            -- },
          }
       end,
    }
@@ -153,7 +153,7 @@ hooks.add("install_plugins", function(use)
          require("neogit").setup {}
       end,
    }
-   use "simrat39/symbols-outline.nvim"
+   -- use "simrat39/symbols-outline.nvim"
 end)
 
 -- alternatively, put this in a sub-folder like "lua/custom/plugins/mkdir"

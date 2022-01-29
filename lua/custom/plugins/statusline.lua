@@ -160,7 +160,7 @@ components.active[1][7] = {
 components.active[1][8] = {
    provider = "diagnostic_warnings",
    enabled = function()
-      return lsp.diagnostics_exist "Warning"
+      return lsp.diagnostics_exist "Warn"
    end,
    hl = { fg = colors.yellow },
    icon = "  ",
@@ -178,7 +178,7 @@ components.active[1][9] = {
 components.active[1][10] = {
    provider = "diagnostic_info",
    enabled = function()
-      return lsp.diagnostics_exist "Information"
+      return lsp.diagnostics_exist "Info"
    end,
    hl = { fg = colors.green },
    icon = "  ",
