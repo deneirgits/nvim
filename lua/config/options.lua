@@ -4,3 +4,9 @@
 local opt = vim.opt
 
 opt.scrolloff = 999
+
+vim.filetype.add({
+  extension = {
+    templ = "templ",
+  },
+})
